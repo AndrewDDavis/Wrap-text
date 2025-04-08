@@ -1,5 +1,6 @@
+#!/bin/env bash
+
 # TODO
-# - turn this into a script that can be called, rather than a function
 # - respect markdown syntax, esp. lists
 # - get inspiration from the VS-Code plugin that hard-wraps text
 # - look at the textfilter command of the micro docs
@@ -7,7 +8,7 @@
 
 wrap-txt() {
 
-    : "Wrap text
+    : "Reformat text by hard-wrapping and relowing lines
 
         Usage: wrap-txt [fmt-options] [file]
 
@@ -42,3 +43,11 @@ wrap-txt() {
 
     "${fmt_cmd[@]}" "$@"
 }
+
+
+if [[ $0 == "${BASH_SOURCE[0]}" ]]
+then
+    # script was executed, rather than sourced
+    wrap-txt "$@" \
+        || exit
+fi
