@@ -22,3 +22,9 @@ Notable fmt options:
 
 -w N
 : maximum line width
+
+
+## Install
+
+Download the source files and symlink the main .sh file from a directory on your path,
+e.g. `~/.local/bin` or `/usr/local/bin`.
