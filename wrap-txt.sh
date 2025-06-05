@@ -8,7 +8,7 @@
 
 wrap-txt() {
 
-    : "Reformat text by hard-wrapping and relowing lines
+    : """Reformat text by hard-wrapping and relowing lines
 
         Usage: wrap-txt [fmt-options] [file]
 
@@ -32,7 +32,7 @@ wrap-txt() {
 
           -w N
           : maximum line width
-    "
+    """
 
 	[[ ${1-} == @(-h|--help) ]] &&
     	{ docsh -TD; return; }
